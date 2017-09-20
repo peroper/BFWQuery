@@ -84,7 +84,7 @@
 {
     BOOL success = [self executeUpdate:@"begin immediate transaction"];
     if (success) {
-        _inTransaction = YES;
+        //_inTransaction = YES;
     }
     return success;
 }
@@ -515,7 +515,7 @@
 	   columnName:(NSString*)columnName
 {
 	self.query.currentRow = row;
-	id object = [self.query.resultSet objectForColumnName:columnName];
+	id object = [self.query.resultSet objectForColumn:columnName];
 	if (object == [NSNull null]) {
 		object = nil;
 	}

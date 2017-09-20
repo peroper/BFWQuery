@@ -25,5 +25,5 @@ Pod::Spec.new do |s|
 
   s.source_files = "BFWQuery/Modules/BFWQuery/**/*.{h,m}"
   s.library = "sqlite3"
-  s.dependency "FMDB", "~> 2.6"
+  s.dependency "FMDB", "~> 2.7"
 end
